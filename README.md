@@ -47,26 +47,22 @@ A secure e-commerce API with JWT authentication and CRUD operations for book man
    logging.level.org.springframework.security = debug
    ```
 4. Build & Run:
-```bash
     mvn clean install
     mvn spring-boot:run
-```
+
 ## 🔑 Authentication API
  ### Sign Up
-     ```bash
      curl -X POST http://localhost:8080/auth/signup \
      -H "Content-Type: application/json" \
      -d '{"email":"user@example.com", "password":"securePassword123"}'
-     ```
+     
   ### Sign In
-       ```bash
        curl -X POST http://localhost:8080/auth/signin \
        -H "Content-Type: application/json" \
        -d '{"email":"user@example.com", "password":"securePassword123"}'
-       ```
+  
 ##📚 Book API (Requires JWT Token)
   ### Create Book
-     ```bash
         curl -X POST http://localhost:8080/books \
         -H "Authorization: Bearer YOUR_JWT_TOKEN" \
         -H "Content-Type: application/json" \
@@ -78,23 +74,35 @@ A secure e-commerce API with JWT authentication and CRUD operations for book man
              "rating":4.8,
              "publishedDate":"2024-01-01"
            }'
-           ```
+           
    ### Core Operations
-     ```http
          GET    /books         - List all books
          GET    /books/{id}    - Get single book
          PUT    /books/{id}    - Update book
-          DELETE /books/{id}    - Delete book
-          ```
+         DELETE /books/{id}    - Delete book
+      
   ### 🔍 Search & Filters
-       ```http
-             GET /books?author=J.K. Rowling
+            GET /books?author=J.K. Rowling
             GET /books?category=Fiction
             GET /books?rating=4.5
             GET /books?search=spring
-            ```
-            
-  ### database Screenshots
-     ![Query the users books](https://github.com/user-attachments/assets/f0321c4d-e0f8-43ae-b378-972de2f70310)
-     ![Query the users](https://github.com/user-attachments/assets/7b08bac0-7283-4681-b4b2-ffda91d7087f)
      
+  ### CRUD APIs Screenshots
+  #### 1. Create a New Book (POST)
+  ![Create](https://github.com/user-attachments/assets/e75d0282-08b3-4009-8168-4631bf5f8b2d)
+  #### 2. Get All Books (GET)
+  ![Read](https://github.com/user-attachments/assets/1e3d64d2-ba23-4ba6-a53e-3be500824013)
+  #### 3. Get Book by ID (GET)
+  ![image](https://github.com/user-attachments/assets/49ed38ef-9730-4ca1-8ada-0604ac286945)
+  #### 4. Update Book by ID (PUT)
+   ![image](https://github.com/user-attachments/assets/82024e06-a76a-44e1-ab27-73cd1adb024f)
+  #### 5. Delete Book by ID (DELETE)
+   ![image](https://github.com/user-attachments/assets/4f2fd78c-1fe5-4891-a105-d85a136c1541)
+
+               
+  ### Database Screenshots After The Above CRUD Operations
+  #### Books
+  ![image](https://github.com/user-attachments/assets/5e9f1d74-3158-442d-9aba-330b6203b12a)
+
+  #### Users
+  ![Query the users](https://github.com/user-attachments/assets/0c5a6a12-02c3-47d5-8920-10362574e14b)
