@@ -94,4 +94,7 @@ A secure e-commerce API with JWT authentication and CRUD operations for book man
             GET /books?search=spring
             ```
             
+  ### database Screenshots
+     ![Query the users books](https://github.com/user-attachments/assets/f0321c4d-e0f8-43ae-b378-972de2f70310)
+     ![Query the users](https://github.com/user-attachments/assets/7b08bac0-7283-4681-b4b2-ffda91d7087f)
      
